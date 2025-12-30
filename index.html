@@ -1,0 +1,74 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Number Picker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Password Screen -->
+        <div id="password-screen" class="screen active">
+            <h1 class="title">输入密码</h1>
+            <p class="subtitle">请输入大师的６位数字密码</p>
+            
+            <div class="password-container">
+                <div class="password-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="error-message" id="error-message"></div>
+            </div>
+            
+            <div class="keypad">
+                <button class="key" data-number="1">1</button>
+                <button class="key" data-number="2">2</button>
+                <button class="key" data-number="3">3</button>
+                <button class="key" data-number="4">4</button>
+                <button class="key" data-number="5">5</button>
+                <button class="key" data-number="6">6</button>
+                <button class="key" data-number="7">7</button>
+                <button class="key" data-number="8">8</button>
+                <button class="key" data-number="9">9</button>
+                <button class="key clear" id="clear">清除</button>
+                <button class="key" data-number="0">0</button>
+                <button class="key delete" id="delete">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 18L18 6M18 18L6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Number Picker Screen -->
+        <div id="picker-screen" class="screen">
+            <h1 class="title">这是一个取号器</h1>
+            <p class="subtitle">于是你的号码正在生成中.......</p>
+            
+            <div class="digital-counter-container">
+                <div class="digital-counter" id="digital-counter">
+                    <div class="digit">
+                        <div class="digit-inner">
+                            <span class="digit-value">1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="status-container">
+                <div class="status-indicator" id="status-indicator">
+                    <div class="spinner"></div>
+                    <span class="status-text">取号中……</span>
+                </div>
+            </div>
+            
+            <button class="reset-button" id="reset-button">重置</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body></html>
